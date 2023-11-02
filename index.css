@@ -1,0 +1,115 @@
+.playable-list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 45px;
+}
+
+.playable-container {
+  display: grid;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.link {
+  display: block;
+  background: #000;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: unset;
+  text-align: center;
+}
+
+.phone {
+  padding: 40px 10px;
+  position: relative;
+  /* position: relative; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 0;
+  line-height: 0;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4) inset;
+  background: #b7b7b7; /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    #b7b7b7 0%,
+    #cecece 44%,
+    #cecece 55%,
+    #b7b7b7 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    #b7b7b7 0%,
+    #cecece 44%,
+    #cecece 55%,
+    #b7b7b7 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #b7b7b7 0%,
+    #cecece 44%,
+    #cecece 55%,
+    #b7b7b7 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.phone::before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: block;
+  content: "";
+  background: #1c1c1c;
+  background: -moz-linear-gradient(
+    45deg,
+    #000000 0%,
+    #111111 45%,
+    #222222 56%,
+    #000000 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #000000 0%,
+    #111111 45%,
+    #222222 56%,
+    #000000 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #111111 45%,
+    #222222 56%,
+    #000000 100%
+  );
+}
+
+.phone > div {
+  position: relative;
+  width: 20vw;
+  height: 30vw;
+}
+
+.phone > div > iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .playable-list {
+    grid-auto-flow: row;
+    gap: 45px;
+  }
+  .phone > div {
+    position: relative;
+    width: 50vw;
+    height: 80vw;
+  }
+}
